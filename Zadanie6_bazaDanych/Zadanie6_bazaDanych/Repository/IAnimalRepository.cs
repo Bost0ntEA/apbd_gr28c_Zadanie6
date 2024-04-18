@@ -5,8 +5,9 @@ namespace Zadanie6_bazaDanych.Repository;
 
 public interface IAnimalRepository
 {
-    IEnumerable<Animal> GetAnimals();
-    IEnumerable<Animal> GetAnimal();
+    IEnumerable<Animal> GetAnimals(string? orderBy);
+    int UpdateAnimal(int id,AddAnimal animal);
     void AddAnimal(AddAnimal animal);
-    
+    void DeleteAnimal(int idAnimal);
+
 }
